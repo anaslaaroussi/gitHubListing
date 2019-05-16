@@ -2,5 +2,7 @@ import React from "react";
 import styles from "./styles";
 
 export const Header = () => {
-  return <div />;
+  const { header } = styles;
+
+  return <div style={header}>GITHUB REPOS</div>;
 };
