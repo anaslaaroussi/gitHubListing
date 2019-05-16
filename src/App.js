@@ -11,13 +11,12 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props);
     const { fetching, error, repos } = this.props;
 
     return (
       <div className="App">
         <Header />
-        <CardList />
+        {repos.length ? <CardList repos={repos} /> : null}
       </div>
     );
   }
