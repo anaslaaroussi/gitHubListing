@@ -1,4 +1,14 @@
-import { takeLatest, put, delay, call, all, select } from "redux-saga/effects";
+import {
+  takeLatest,
+  put,
+  delay,
+  call,
+  all,
+  select,
+  take,
+  fork,
+  takeLeading
+} from "redux-saga/effects";
 import { github_url } from "./contants";
 import {
   API_CALL_REQUEST,
@@ -10,7 +20,7 @@ const getPage = state => state.page;
 var actualPage = null;
 
 function* watcherSaga() {
-  yield takeLatest(API_CALL_REQUEST, workerSaga);
+  yield takeLeading(API_CALL_REQUEST, workerSaga);
 }
 
 function callApi() {

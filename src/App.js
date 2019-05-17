@@ -31,7 +31,11 @@ class App extends Component {
     );
     const windowBottom = windowHeight + window.pageYOffset;
     if (windowBottom >= docHeight - 200) {
-      this.props.onGithubRequest();
+      try {
+        this.props.onGithubRequest();
+      } catch (e) {
+        alert(e);
+      }
     }
   };
 
