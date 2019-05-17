@@ -6,7 +6,7 @@ const styles = {
     padding: "0 40px"
   },
   avatar: {
-    height: 67,
+    width: 67,
     borderRadius: 50
   },
   profilName: {
@@ -16,7 +16,6 @@ const styles = {
     textAlign: "center"
   },
   infosBlock: {
-    // maxWidth: 650,
     marginLeft: 40
   },
 

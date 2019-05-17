@@ -1,5 +1,7 @@
 const styles = {
   header: {
+    position: "fixed",
+    width: "100%",
     height: 70,
     display: "flex",
     alignItems: "center",

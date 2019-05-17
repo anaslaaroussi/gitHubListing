@@ -1,11 +1,10 @@
 import React from "react";
-import styles from "./styles";
 import { Card } from "../card/Card";
 
 export const CardList = ({ repos }) => {
   console.log(repos);
   return (
-    <div>
+    <div style={{ transform: "translateY(70px)", zIndex: 2 }}>
       {repos.map((repo, index) => {
         const {
           owner,

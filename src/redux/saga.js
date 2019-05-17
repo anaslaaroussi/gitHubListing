@@ -1,10 +1,14 @@
-import { takeLatest, put, delay, call, all } from "redux-saga/effects";
+import { takeLatest, put, delay, call, all, select } from "redux-saga/effects";
 import { github_url } from "./contants";
 import {
   API_CALL_REQUEST,
   API_CALL_SUCCESS,
   API_CALL_FAILURE
 } from "./actions";
+
+const getPage = state => state.page;
+var actualPage = null;
+
 function* watcherSaga() {
   yield takeLatest(API_CALL_REQUEST, workerSaga);
 }
@@ -15,6 +19,9 @@ function callApi() {
 
 function* workerSaga() {
   try {
+    const page = yield select(getPage);
+    actualPage = page;
+    console.log(actualPage);
     const response = yield call(callApi);
     console.log(response);
 
