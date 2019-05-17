@@ -17,14 +17,14 @@ import {
 } from "./actions";
 
 const getPage = state => state.page;
-var actualPage = null;
+var actualPage = 1;
 
 function* watcherSaga() {
   yield takeLeading(API_CALL_REQUEST, workerSaga);
 }
 
 function callApi() {
-  return fetch(github_url).then(response => response.json());
+  return fetch(github_url + actualPage).then(response => response.json());
 }
 
 function* workerSaga() {

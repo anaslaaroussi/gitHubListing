@@ -20,7 +20,7 @@ export function http_reducer(state = initialState, action) {
         ...state,
         fetching: false,
         repos: state.repos.concat(action.payload),
-        page: state.page++
+        page: state.page + 1
       };
     case API_CALL_FAILURE:
       return { ...state, fetching: false, error: action.error };
