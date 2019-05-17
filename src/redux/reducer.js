@@ -23,7 +23,7 @@ export function http_reducer(state = initialState, action) {
         page: state.page++
       };
     case API_CALL_FAILURE:
-      return { ...state, fetching: false, repos: null, error: action.error };
+      return { ...state, fetching: false, error: action.error };
     default:
       return state;
   }

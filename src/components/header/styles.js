@@ -8,7 +8,8 @@ const styles = {
     justifyContent: "center",
     color: "#FFFFFF",
     fontSize: 20,
-    backgroundColor: "#474343"
+    backgroundColor: "#474343",
+    zIndex: 2
   }
 };
 
