@@ -13,8 +13,10 @@ const initialState = {
 
 export function http_reducer(state = initialState, action) {
   switch (action.type) {
+    // call request
     case API_CALL_REQUEST:
       return { ...state, fetching: true, error: null };
+    // call success
     case API_CALL_SUCCESS:
       return {
         ...state,
@@ -22,6 +24,8 @@ export function http_reducer(state = initialState, action) {
         repos: state.repos.concat(action.payload),
         page: state.page + 1
       };
+
+    // call failure
     case API_CALL_FAILURE:
       return { ...state, fetching: false, error: action.error };
     default:

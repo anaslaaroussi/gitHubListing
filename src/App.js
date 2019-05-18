@@ -16,7 +16,7 @@ class App extends Component {
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
   }
-
+  // detect if the scroll is nearly in the end to request new data from github api
   handleScroll = e => {
     const windowHeight =
       "innerHeight" in window
@@ -46,6 +46,7 @@ class App extends Component {
 
     return (
       <div className="App" onScroll={this.onScroll}>
+        {/* show loader if the fetch client is fetching data from github api */}
         <Header>{fetching ? <Loader /> : null}</Header>
 
         <ErrorBoundry>
