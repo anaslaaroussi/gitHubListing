@@ -5,6 +5,7 @@ import { CardList } from "./components/card_list/CardList";
 import { API_CALL_REQUEST } from "./redux/actions";
 import { Header } from "./components/header/Header";
 import { Loader } from "./components/loader/Loader";
+import ErrorBoundry from "./components/errorBoundary/ErrorBoundary";
 
 class App extends Component {
   componentDidMount() {
@@ -46,7 +47,10 @@ class App extends Component {
     return (
       <div className="App" onScroll={this.onScroll}>
         <Header>{fetching ? <Loader /> : null}</Header>
-        {repos.length ? <CardList repos={repos} /> : null}
+
+        <ErrorBoundry>
+          {repos.length ? <CardList repos={repos} /> : null}
+        </ErrorBoundry>
       </div>
     );
   }
