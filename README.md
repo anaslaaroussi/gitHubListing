@@ -71,15 +71,22 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 This will list the most starred Github repos that were created in the last 30 days (30 results per time).
 
-#Dependencies
+### Dependencies
 
 `redux` : Used to manage this application state.
+
 `redux-saga` : Used to manage asynchronous request(such as data fetching in this project) easier to manage , and for better handling errors.
+
 `reduxDevTools`: Used for debugging application's state changes(You should have Redux DevTools extension to work with this feature).
+
 `enzyme`: Make easier to test components in react, this will help in this project for snapshot testing.
+
 `Jest` : For testing.
-#Features
+
+### Features
 
 `Scroll` : When you reach the bottom of the page a new set of data (30 results will be added), the api may fail after several fetching due the the limit that github placed.
+
 `Loader` : A loader must appear in the top right in the header when you reach the bottom of scroll, this mean that that the HTTP client is fetching a new result from github api.
+
 `error boudary` : This feature render an error component if there is an error in the code.
