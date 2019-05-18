@@ -4,6 +4,7 @@ import "./App.css";
 import { CardList } from "./components/card_list/CardList";
 import { API_CALL_REQUEST } from "./redux/actions";
 import { Header } from "./components/header/Header";
+import { Loader } from "./components/loader/Loader";
 
 class App extends Component {
   componentDidMount() {
@@ -44,7 +45,7 @@ class App extends Component {
     console.log(repos);
     return (
       <div className="App" onScroll={this.onScroll}>
-        <Header />
+        <Header>{fetching ? <Loader /> : null}</Header>
         {repos.length ? <CardList repos={repos} /> : null}
       </div>
     );
