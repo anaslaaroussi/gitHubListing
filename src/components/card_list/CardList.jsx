@@ -2,7 +2,6 @@ import React from "react";
 import { Card } from "../card/Card";
 
 export const CardList = ({ repos }) => {
-  //   throw "rrr";
   return (
     <div style={{ transform: "translateY(70px)", zIndex: 2 }}>
       {repos.map((repo, index) => {

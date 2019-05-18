@@ -42,8 +42,8 @@ class App extends Component {
   };
 
   render() {
-    const { fetching, error, repos } = this.props;
-    console.log(repos);
+    const { fetching, repos } = this.props;
+
     return (
       <div className="App" onScroll={this.onScroll}>
         <Header>{fetching ? <Loader /> : null}</Header>
