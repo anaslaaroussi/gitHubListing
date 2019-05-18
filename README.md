@@ -76,7 +76,8 @@ This will list the most starred Github repos that were created in the last 30 da
 `redux` : Used to manage this application state.
 `redux-saga` : Used to manage asynchronous request(such as data fetching in this project) easier to manage , and for better handling errors.
 `reduxDevTools`: Used for debugging application's state changes(You should have Redux DevTools extension to work with this feature).
-
+`enzyme`: Make easier to test components in react, this will help in this project for snapshot testing.
+`Jest` : For testing.
 #Features
 
 `Scroll` : When you reach the bottom of the page a new set of data (30 results will be added), the api may fail after several fetching due the the limit that github placed.
